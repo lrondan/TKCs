@@ -1,1 +1,1 @@
-# TKCs------------Tools Kill Computer's
+# TKCs------------Tools Kills Computer's
