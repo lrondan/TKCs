@@ -12,7 +12,6 @@ try:
     import tkinter
     import requests
     import bs4
-    #import dns.resolver
     import socket
     import subprocess
     import argparse
@@ -21,7 +20,6 @@ try:
     import os 
     import time
     import argparse
-    #import kitools
     from concurrent.futures import ThreadPoolExecutor as executor
     import socket
     import sys
