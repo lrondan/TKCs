@@ -53,8 +53,9 @@ class Windows:
         pass
 #botones en pantalla
     def Botones(self):
-        Button(self.root, text='Salir', width=10, justify=CENTER, background='red', cursor='pirate', font=BEVEL).place(x=650,y=470)
+        Button(self.root, text='Salir', width=10, background='red', cursor='pirate', command=self.Salir).place(x=650,y=470)
 #funciones
+
     def Salir(self):
         self.root.quit()
         self.root.destroy()
