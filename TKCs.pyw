@@ -16,6 +16,8 @@ class Windows:
         self.Menus()
         self.Entradas()
         self.Botones()
+        self.Listas()
+        self.Texto()
 #agragar fotos y logos
         self.imagen = PhotoImage(file='images/foto1.png')
         Label(self.root, image=self.imagen, bd=0).place(x=-25,y=330)
@@ -47,19 +49,27 @@ class Windows:
 
 #textos en pantalla
     def Texto(self):
-        pass
+        Label(self.root, text='Generar FAKE ID de: UK', background='green', relief=SUNKEN).place(x=0,y=80)
 #entradas en pantallas
     def Entradas(self):
         pass
 #botones en pantalla
     def Botones(self):
         Button(self.root, text='Salir', width=10, background='red', cursor='pirate', command=self.Salir).place(x=650,y=470)
+        Button(self.root, text='Generar', width=10, background='red', cursor='pirate', command=self.FID).place(x=150,y=78)
+
+#listas despleglabes
+    def Listas(self):
+        pass
+
 #funciones
 
     def Salir(self):
         self.root.quit()
         self.root.destroy()
 
-        
+    def FID(self):
+        from fake_id import fiduk
+
 objeto = Windows(Tk())
 objeto.root.mainloop()
