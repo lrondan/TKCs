@@ -3,6 +3,8 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import PhotoImage
+import webbrowser
+from tkinter import messagebox as mBox
 
 #diseno de la interfaz
 class Windows:
@@ -29,23 +31,25 @@ class Windows:
         self.root.config(menu=self.barramenu)
 
         self.opc1 = Menu(self.barramenu, tearoff=0)
-        self.opc1.add_command(label='opc1')
+        self.opc1.add_command(label='Uso')
 #menu1
         self.opc2 = Menu(self.barramenu, tearoff=0)
-        self.opc2.add_command(label='opc1')
+        self.opc2.add_command(label='Tor', command=self.Tor)
         self.opc2.add_separator()
-        self.opc2.add_command(label='opc2')
+        self.opc2.add_command(label='Kali linux', command=self.KLux)
+        self.opc2.add_separator()
+        self.opc2.add_command(label='VPN', command=self.VPN)
+        self.opc2.add_separator()
+        self.opc2.add_command(label='private mail', command=self.Pmail)
 #menu3  
         self.opc3 = Menu(self.barramenu, tearoff=0)      
-        self.opc3.add_command(label='opc1')
+        self.opc3.add_command(label='libre en la red', command=self.FREE)
         self.opc3.add_separator()
-        self.opc3.add_command(label='opc2')
-        self.opc3.add_separator()
-        self.opc3.add_command(label='opc3')
+        self.opc3.add_command(label='DONAME ALGO AHÍ', command=self.Donate)
 
-        self.barramenu.add_cascade(label='Desp1', menu=self.opc1)
-        self.barramenu.add_cascade(label='Desp2',menu=self.opc2)
-        self.barramenu.add_cascade(label='Desp3',menu=self.opc3)
+        self.barramenu.add_cascade(label='Ayuda', menu=self.opc1)
+        self.barramenu.add_cascade(label='Herramientas web',menu=self.opc2)
+        self.barramenu.add_cascade(label='Camino a la libertad',menu=self.opc3)
 
 #textos en pantalla
     def Texto(self):
@@ -75,6 +79,25 @@ class Windows:
 
     def FADD(self):
         from fake_id import fidusa
+
+    def Tor(self):
+        webbrowser.open('https://www.torproject.org')
+
+    def KLux(self):
+        webbrowser.open('https://www.kali.org')
+
+    def VPN(self):
+        webbrowser.open('https://protonvpn.com')
+
+    def Pmail(self):
+        webbrowser.open('https://proton.me/mail')
+
+    def FREE(self):
+        webbrowser.open('menu\index.html')
+
+    def Donate(self):
+        mBox.showinfo('Bitcoin','BTC: ')
+
 
 objeto = Windows(Tk())
 objeto.root.mainloop()
