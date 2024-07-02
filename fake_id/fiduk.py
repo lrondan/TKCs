@@ -11,4 +11,4 @@ with open('fake_id/UK_F_ID.json', 'r')as file:
     df = pd.DataFrame(data=listas)
     nuevo_df = (df.iloc[valor_randon])
 
-results = MBox.showinfo('FID_UK',f'{nuevo_df}')
+MBox.showinfo('FID_UK',f'{nuevo_df}')

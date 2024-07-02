@@ -49,7 +49,8 @@ class Windows:
 
 #textos en pantalla
     def Texto(self):
-        Label(self.root, text='Generar FAKE ID de: UK', background='green', relief=SUNKEN).place(x=0,y=80)
+        Label(self.root, text='Generar FAKE ID de: UK', background='green', relief=SUNKEN, width=20).place(x=0,y=80)
+        Label(self.root, text='Fake Address: USA', background='green', relief=SUNKEN, width=20).place(x=0,y=120)
 #entradas en pantallas
     def Entradas(self):
         pass
@@ -57,6 +58,7 @@ class Windows:
     def Botones(self):
         Button(self.root, text='Salir', width=10, background='red', cursor='pirate', command=self.Salir).place(x=650,y=470)
         Button(self.root, text='Generar', width=10, background='red', cursor='pirate', command=self.FID).place(x=150,y=78)
+        Button(self.root, text='Generar', width=10, background='red', cursor='pirate', command=self.FADD).place(x=150,y=118)
 
 #listas despleglabes
     def Listas(self):
@@ -70,6 +72,9 @@ class Windows:
 
     def FID(self):
         from fake_id import fiduk
+
+    def FADD(self):
+        from fake_id import fidusa
 
 objeto = Windows(Tk())
 objeto.root.mainloop()
