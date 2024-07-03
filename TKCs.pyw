@@ -5,6 +5,7 @@ from tkinter import ttk
 from tkinter import PhotoImage
 import webbrowser
 from tkinter import messagebox as mBox
+import os
 
 #diseno de la interfaz
 class Windows:
@@ -93,10 +94,10 @@ class Windows:
         webbrowser.open('https://proton.me/mail')
 
     def FREE(self):
-        webbrowser.open('menu\index.html')
+        webbrowser.open('menu/index.html')
 
     def Donate(self):
-        mBox.showinfo('Bitcoin','BTC: ')
+        from donate import donation
 
 
 objeto = Windows(Tk())
