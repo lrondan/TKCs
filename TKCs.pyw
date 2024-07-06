@@ -94,7 +94,7 @@ class Windows:
         webbrowser.open('https://proton.me/mail')
 
     def FREE(self):
-        webbrowser.open('menu/index.html')
+        webbrowser.open('menu\index.html')
 
     def Donate(self):
         from donate import donation
