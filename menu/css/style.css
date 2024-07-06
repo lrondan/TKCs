@@ -7,3 +7,12 @@ h1{
     font: Opera3;
     color: whitesmoke;
 }
+
+p1{
+    color: rgb(18, 238, 238);
+}
+
+li{
+    color: antiquewhite;
+    font-style: italic;
+}
