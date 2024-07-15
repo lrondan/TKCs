@@ -64,6 +64,7 @@ class Windows:
         Button(self.root, text='Salir', width=10, background='red', cursor='pirate', command=self.Salir).place(x=650,y=470)
         Button(self.root, text='Generar', width=10, background='red', cursor='pirate', command=self.FID).place(x=150,y=78)
         Button(self.root, text='Generar', width=10, background='red', cursor='pirate', command=self.FADD).place(x=150,y=118)
+        Button(self.root, text='Web Scrap', width=10, background='green', command=self.WSCR).place(x=10,y=15)
 
 #listas despleglabes
     def Listas(self):
@@ -98,6 +99,9 @@ class Windows:
 
     def Donate(self):
         from donate import donation
+
+    def WSCR(self):
+        from scrapp import scrapping
 
 
 objeto = Windows(Tk())
