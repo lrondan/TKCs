@@ -56,6 +56,8 @@ class Windows:
     def Texto(self):
         Label(self.root, text='Generar FAKE ID de: UK', background='green', relief=SUNKEN, width=20).place(x=0,y=80)
         Label(self.root, text='Fake Address: USA', background='green', relief=SUNKEN, width=20).place(x=0,y=120)
+        Label(self.root, text='Encriptado', background='green', relief=SUNKEN, width=20).place(x=400,y=80)
+        Label(self.root, text='Desencriptado', background='green', relief=SUNKEN, width=20).place(x=400,y=120)
 #entradas en pantallas
     def Entradas(self):
         pass
@@ -65,6 +67,9 @@ class Windows:
         Button(self.root, text='Generar', width=10, background='red', cursor='pirate', command=self.FID).place(x=150,y=78)
         Button(self.root, text='Generar', width=10, background='red', cursor='pirate', command=self.FADD).place(x=150,y=118)
         Button(self.root, text='Web Scrap', width=10, background='green', command=self.WSCR).place(x=10,y=15)
+        Button(self.root, text='Generar', width=10, background='red', cursor='heart', command=self.Encriptado).place(x=550,y=78)
+        Button(self.root, text='Generar', width=10, background='red', cursor='heart', command=self.Decript).place(x=550,y=118)
+
 
 #listas despleglabes
     def Listas(self):
@@ -95,13 +100,19 @@ class Windows:
         webbrowser.open('https://proton.me/mail')
 
     def FREE(self):
-        webbrowser.open('menu\index.html')
+        webbrowser.open('menu/index.html')
 
     def Donate(self):
         from donate import donation
 
     def WSCR(self):
         from scrapp import scrapping
+
+    def Encriptado(self):
+        from encript import encript2
+
+    def Decript(self):
+        from encript import decript2
 
 
 objeto = Windows(Tk())
