@@ -32,7 +32,7 @@ class Windows:
         self.root.config(menu=self.barramenu)
 
         self.opc1 = Menu(self.barramenu, tearoff=0)
-        self.opc1.add_command(label='Uso')
+        self.opc1.add_command(label='Uso', command=self.Usos)
 #menu1
         self.opc2 = Menu(self.barramenu, tearoff=0)
         self.opc2.add_command(label='Tor', command=self.Tor)
@@ -100,7 +100,7 @@ class Windows:
         webbrowser.open('https://proton.me/mail')
 
     def FREE(self):
-        webbrowser.open('menu/index.html')
+        webbrowser.open('menu\index.html')
 
     def Donate(self):
         from donate import donation
@@ -113,6 +113,9 @@ class Windows:
 
     def Decript(self):
         from encript import decript2
+
+    def Usos(self):
+        webbrowser.open_new('uso\index.html')
 
 
 objeto = Windows(Tk())
