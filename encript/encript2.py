@@ -29,26 +29,45 @@ class App:
     def MD5(self):
         md5 = hashlib.md5(self.clave.get().encode('utf-8')).hexdigest()
         mBox.showinfo('Hash MD5:'," %s" % str(md5))
+        with open('./mensaje.txt', 'w')as file:
+            for lines in md5:
+                file.write(lines)
+        
         
     def SHA224(self):
         sha224 = hashlib.sha224(self.clave.get().encode('utf-8')).hexdigest()
         mBox.showinfo('Hash SHA224:', "%s" % str(sha224))
+        with open('./mensaje.txt', 'w')as file:
+            for lines in sha224:
+                file.write(lines)
 
     def SHA256(self):
         sha256 = hashlib.sha256(self.clave.get().encode('utf-8')).hexdigest()
         mBox.showinfo('Hash SHA256:', "%s" % str(sha256))
+        with open('./mensaje.txt', 'w')as file:
+            for lines in sha256:
+                file.write(lines)
 
     def SHA384(self):
         sha384 = hashlib.sha384(self.clave.get().encode('utf-8')).hexdigest()
         mBox.showinfo('Hash SHA384:', "%s" % str(sha384))
+        with open('./mensaje.txt', 'w')as file:
+            for lines in sha384:
+                file.write(lines)
 
     def SHA512(self):
         sha512 = hashlib.sha512(self.clave.get().encode('utf-8')).hexdigest()
         mBox.showinfo('Hash SHA512:', "%s" % str(sha512))
+        with open('./mensaje.txt', 'w')as file:
+            for lines in sha512:
+                file.write(lines)
 
     def SHA1(self):    
         sha1 = hashlib.sha1(self.clave.get().encode('utf-8')).hexdigest()
         mBox.showinfo('Hash SHA1:', "%s" % str(sha1))
+        with open('./mensaje.txt', 'w')as file:
+            for lines in sha1:
+                file.write(lines)
 
     def Salir(self):
         self.app.quit()
