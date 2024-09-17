@@ -58,6 +58,8 @@ class Windows:
         Label(self.root, text='Fake Address: USA', background='green', relief=SUNKEN, width=20).place(x=0,y=120)
         Label(self.root, text='Encriptado', background='green', relief=SUNKEN, width=20).place(x=400,y=80)
         Label(self.root, text='Desencriptado', background='green', relief=SUNKEN, width=20).place(x=400,y=120)
+        Label(self.root, text='FTP fuerza bruta', background='green', relief=SUNKEN, width=20).place(x=400,y=160)
+        Label(self.root, text='ATK diccionario', background='green', relief=SUNKEN, width=20).place(x=400,y=200)
 #entradas en pantallas
     def Entradas(self):
         pass
@@ -69,6 +71,8 @@ class Windows:
         Button(self.root, text='Web Scrap', width=10, background='green', command=self.WSCR).place(x=10,y=15)
         Button(self.root, text='Generar', width=10, background='red', cursor='heart', command=self.Encriptado).place(x=550,y=78)
         Button(self.root, text='Generar', width=10, background='red', cursor='heart', command=self.Decript).place(x=550,y=118)
+        Button(self.root, text='Generar', width=10, background='red', cursor='heart', command=self.FTP).place(x=550,y=158)
+        Button(self.root, text='Generar', width=10, background='red', cursor='heart', command=self.DICT).place(x=550,y=198)
 
 
 #listas despleglabes
@@ -116,6 +120,12 @@ class Windows:
 
     def Usos(self):
         webbrowser.open_new('uso\index.html')
+
+    def FTP(self):
+        from ftp import fbrute
+
+    def DICT(self):
+        from dict import main
 
 
 objeto = Windows(Tk())
