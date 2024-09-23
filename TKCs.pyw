@@ -12,7 +12,7 @@ class Windows:
     def __init__(self, interfaz) -> None:
         self.root = interfaz
         self.root.title('TKC`s')
-        self.root.geometry('750x520')
+        self.root.geometry('700x320')
         self.root.resizable(0,0)
         self.root.config(bg='black')
         self.frame1 = Frame(self.root, borderwidth=5, relief=SUNKEN, background='red').pack(expand=True, side='top', anchor='n', ipadx=750, ipady=25)
@@ -23,7 +23,7 @@ class Windows:
         self.Texto()
 #agragar fotos y logos
         self.imagen = PhotoImage(file='images/foto1.png')
-        Label(self.root, image=self.imagen, bd=0).place(x=-25,y=330)
+        Label(self.root, image=self.imagen, bd=0).place(x=0,y=150)
         self.imagen2 = PhotoImage(file='images/Diapositiva1.png')
         Label(self.frame1, image=self.imagen2, bd=0).place(x=320,y=10)
 #creacion de los menus----------------------------
@@ -65,10 +65,12 @@ class Windows:
         pass
 #botones en pantalla
     def Botones(self):
-        Button(self.root, text='Salir', width=10, background='red', cursor='pirate', command=self.Salir).place(x=650,y=470)
+        Button(self.root, text='Salir', width=10, background='red', cursor='pirate', command=self.Salir).place(x=600,y=270)
         Button(self.root, text='Generar', width=10, background='red', cursor='pirate', command=self.FID).place(x=150,y=78)
         Button(self.root, text='Generar', width=10, background='red', cursor='pirate', command=self.FADD).place(x=150,y=118)
         Button(self.root, text='Web Scrap', width=10, background='green', command=self.WSCR).place(x=10,y=15)
+        Button(self.root, text='Geo Loc', width=10, background='green', command=self.GeoLoc).place(x=150,y=15)
+        Button(self.root, text='Brute Subdomain', width=20, background='green', command=self.Brute_sub).place(x=450,y=15)
         Button(self.root, text='Generar', width=10, background='red', cursor='heart', command=self.Encriptado).place(x=550,y=78)
         Button(self.root, text='Generar', width=10, background='red', cursor='heart', command=self.Decript).place(x=550,y=118)
         Button(self.root, text='Generar', width=10, background='red', cursor='heart', command=self.FTP).place(x=550,y=158)
@@ -126,6 +128,12 @@ class Windows:
 
     def DICT(self):
         from dict import main
+
+    def GeoLoc(self):
+        from geo import geoip
+
+    def Brute_sub(self):
+        from subdominios import bsubdom
 
 
 objeto = Windows(Tk())
