@@ -54,39 +54,6 @@ pip3 install -r requirements.txt
 # Dar permisos de ejecución
 chmod +x *.py
 ```
-
-### **1. Analizar Tecnologías de un Sitio Web**
-```bash
-# Analizar una URL específica
-python web_tech.py --url https://example.com
-
-# Analizar con opciones avanzadas
-python web_tech.py --url https://example.com --deep-scan --timeout 30
-
-# Exportar resultados
-python web_tech.py --url https://example.com --output resultados.json --format json
-```
-
-### **2. Investigar una Dirección IP**
-```bash
-# Información básica de IP
-python ip_osint.py --ip 8.8.8.8
-
-# Escaneo de puertos
-python ip_osint.py --ip 192.168.1.1 --ports 1-100 --scan-ports
-
-# Búsqueda en Shodan (requiere API key)
-python ip_osint.py --ip 8.8.8.8 --shodan
-```
-
-### **3. Modo Interactivo**
-```bash
-# Iniciar interfaz interactiva
-python interactive.py
-
-# O usar menú principal
-python main.py
-```
 ## 🛡️ **Consideraciones de Seguridad y Ética**
 
 ### **Usos Permitidos**
