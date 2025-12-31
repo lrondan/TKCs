@@ -1,6 +1,6 @@
 # 🔍 **Web Technology & IP OSINT Toolkit**
 
-<img src="/images/picture.jpg" alt="Descripción" width="500" height="300">
+<img src="baner.png" alt="Descripción" width="500" height="300">
 
 Una herramienta completa de código abierto para análisis de tecnologías web e investigación OSINT de direcciones IP.
 
