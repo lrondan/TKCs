@@ -23,8 +23,8 @@ Una herramienta completa de código abierto para análisis de tecnologías web e
 ### 🚀**Clonar e Instalar**
 ```bash
 # Clonar repositorio
-git clone https://github.com/tuusuario/web-tech-osint.git
-cd web-tech-osint
+git clone https://github.com/lrondan/TKCs.git
+cd TKCs
 
 # Instalar dependencias
 pip install -r requirements.txt
