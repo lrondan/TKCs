@@ -20,16 +20,6 @@ def main():
                 break
             elif comando == "--help" or comando == "-h":
                 mostrar_ayuda()
-            elif comando.startswith("generate --fakeid") or comando.startswith("generate -f"):
-                country_code = comando.split(" ")[2] if len(comando.split(" ")) > 2 else None
-                if country_code == "us":
-                    print("Generating fake ID for the United States...\n")
-                    from fakeid import fkid_usa
-                    fkid_usa.main(value=None)
-                elif country_code == "uk":
-                    print("Generating fake ID for the United Kingdom...\n")
-                    from fakeid import fkid_uk
-                    fkid_uk.main(value=None)
             elif comando.startswith("geoip -ip"):
                 ip_address = comando.split(" ")[2] if len(comando.split(" ")) > 2 else None
                 if ip_address:
@@ -84,9 +74,6 @@ def mostrar_ayuda():
     print("Available commands:")
     print("+---------------------------------------------------------------+")
     print("|Name of the command     | Syntax                               |")
-    print("|------------------------+--------------------------------------|")
-    print("|Generates a fake ID     | generate --fakeid <country_code>     |")
-    print("|                        |           -f <country_code>          |")
     print("|------------------------+--------------------------------------|")
     print("|Ip geolocation tool     | geoip  -ip <ip_address>              |")
     print("|Domain resolver tool    | domain -d <domain_name>              |")
